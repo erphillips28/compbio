@@ -1,0 +1,165 @@
+Hello and welcome back.
+In the previous lecture Hubel and Wiesel entertained us with their Star Wars Jedi
+Knight lightsaber-like experiment and introduced us to the concept of receptive
+fields. We learned about a descriptor model of
+receptive fields, and in particular, we looked at two different kinds of receptor
+fields, center-surround receptor fields and oriented receptive fields.
+So here are some examples of these oriented receptive fields.
+And, the question that we asked was, how are these oriented receptive fields
+constructed from the center-surround type receptive fields?
+In other words, what we wanted was a mechanistic model of how receptive fields
+are constructed using the neural circuitry of the visual cortex.
+So, in order to answer this question, we need to look at the neuroanatomy of the
+visual system. Here's what happens to the visual
+information after it's processed by the retina.
+It flows through the optic nerve to this nucleus, called the lateral geniculate
+nucleus. And from there, it flows to the primary
+visual cortex or V1. And as we know, in V1, we have receptor
+fields which are elongated that look something like this.
+Whereas the lateral geniculate nucleus, LGN, we have receptive fields that are
+basically centered-surround, similar to what you find in the retina.
+And the question that we're asking is how do we go from the center-surround
+receptor fields to these elongated receptor fields?
+And the clue to this conundrum comes from the anatomy.
+So if you look at the anatomy, you'll see that a number of LGN cells converge to
+single V1 cells. And so, what this means is that a single
+V1 cell receives inputs from a large number of LGN cells.
+And so the question then becomes, how do the inputs which have receptive fields
+such as this, give rise to a receptor field in the output in V1 that looks
+something like this? So I'll give you a couple of moments to
+figure out the answer. So are you ready?
+Let's see. Here is the answer.
+It's actually quite obvious when you think about it.
+In order to form a receptive field that is oriented and looks like this, all you
+have to do is arrange the inputs to have receptive fields that are aligned in this
+particular manner. And, given that, there is a feed forward
+connection or a convergence of these inputs onto one particular V1 cell.
+This particular cell is going to behave as if it has this type of a receptive
+field. In other words, this particular cell in
+V1, our primary visual cortex is going to behave just like the cell that we saw in
+the Hubel and Wiesel movie. It's going to respond to any bar that is
+oriented in this particular way and is bright and has this particular 45 degree
+orientation. So this particular model is a mechanistic
+model of how receptive fields in V1, of this particular kind are constructed.
+And this was suggested by Hubel and Wiesel in the 1960s.
+This model is actually quite controversial, in the sense that, it does
+not take into account other inputs that this V1 cell is receiving.
+So if you look at the neuroanatomy, in V1 you'll find that there are a lot of
+recurrent connections from one V1 cell to other V1 cells.
+So each V1 cell receives inputs from its counterparts within V1, in addition to
+the feed forward inputs from the LGN. And the Hubel and Wiesel model does not
+take into account these recurrent inputs to V1.
+And it turns out that these frequent inputs also contribute to the responses
+of the V1 cell. We will look at both feed forward, as
+well as recurrent networks a little bit later in the course when we discuss
+network level models. Okay, great.
+Now, let's move on to the last type of models.
+These are called interpretive models. So we're going to look at an interpretive
+model of receptive fields, and the question that we're asking is, why are
+receptive fields in V1 shaped in this particular way?
+In other words, why do they look like this?
+Why do they have this orientation and why are they selective for bright or dark
+bars? Another way of asking the same question
+is, what are the computational advantages of such receptive fields?
+Now, this is the kind of question that perhaps an engineer or a computer
+scientist would ask. So why do we need to use these types of
+receptive fields? Do they confer any advantages?
+So, let's look at one particular interpretive model of receptive fields.
+The interpretive model that we look at is based on the efficient coding hypothesis,
+so what does this hypothesis state. Well, it states that the goal of the
+brain, through evolution for example, is to represent images as faithfully and as
+efficiently as possible using the neurons that it has.
+Now, these neurons have receptive fields RF1, RF2, and so on.
+So here are some receptive fields of neurons.
+And the question we're asking is, are these the best way, or the most efficient
+way, of representing images. And so, how do we represent images using
+these types of receptive fields? Well, as an example, I can take these
+receptive feels are of three and four so as take these two, and I can just add
+them. So imagine that they are images, so here
+is a bright region in the image and a dark region in the image bright region in
+the image and dark in the image so if i think of these as just two image patches
+so these two receptive feels I can add the two receptive fields.
+And what kind of an image can I reconstruct?
+Well, if you add these two together, you're going to get some linear
+combination of these regions. So, you have that particular shape.
+So, it's going to be a really bright region up here.
+Maybe a slightly bright region here and here and here and here.
+Because you're adding the plus is here with a little bit of the minuses over
+there, and you're going to get some dark regions over here.
+And, so, what you have is an image that looks something like that.
+So, given that you are adding these two receptive fields, you have a image that
+you reconstructed that looks something like, let's say, a plus sign.
+Now, if you're given a whole bunch of these receptive fields, you can literally
+combine them in this particular way. So this is just a summation sign over all
+the receptive fields, RF1, RF2 and so on and each of these are weighted by some
+number. So, these are the neural response, so a
+linear combination of them is going to give you some particular image.
+Now, what is the goal here? The goal is to find out what are the
+receptive fields, RF1, 2, and 3, and so on that minimize the total squared
+pixel-wise errors between a given set of images.
+So one of these images, perhaps the brain is trying to optimize its representation
+for natural images. And so we can look at the squared
+pixelwise errors between natural images and the reconstruction of those natural
+images I had. And we've also add an additional
+constraint, so you want them to be efficient and so we want these responses
+for example to be as independent as possible we don't want all the neurons to
+be firing at the same time for example and so we can add the constraint that.
+We want these coefficients or these responses r sub i to be as independent as
+possible. So given that we have now this
+optimization criteria and this particular idea of minimizing the total square pixel
+wise errors. And also keeping these responses as
+independent as possible. What are the receptive fields that
+achieve this objective? So, here's what we could do.
+We could start out with a set of random receptive fields.
+So, we are assuming that we don't know what the optimal receptive fields are.
+And we could run our efficient coding algorithm, which tries to minimize the
+reconstruction error. The error of the square pixel-wise errors
+between the reconstructed images and the actual images, and we can run it on
+natural image patches. So, why natural image patches?
+Well, we can assume that the brain has evolved to process natural images.
+In that case, if the brain is indeed trying to perform efficient coding, then.
+Perhaps it's trying to be efficient on these types of images, natural images of
+plants and trees et cetera. And so we can take these kinds of images
+and run our efficient coding algorithm on tiny patches.
+So here's an example of a tiny patch. So we can randomly sample from different
+locations on these natural images and then run the efficient coding algorithm.
+So what is the efficient coding algorithm?
+Well, there's several different kinds. So one is called sparse coding and this
+was suggested by Olshausen and Field. Another one is independent component
+analysis and this is suggested by Bell and Sejnowski.
+And then another algorithm called predictive coding.
+Was suggested by myself and Dana Ballad this was back when I was a graduate
+student I think I'm giving away my age now, but that's okay.
+And basically, these three types of efficient coding algorithms give rise to
+a set of receptive fields that I have been optimized as a less.
+Reconstruct these particular tiny image patches within these natural images as
+faithfully as possible. So, let's look at what these receptor
+fields that started out as random, but, then they were tuned by the efficient
+coding algorithm, what they look like after they've converged.
+Aha, so here they are. What you see here is that each of these
+is one particular receptor feel that has been learnt from natural images by the
+efficient coding algorithm. And you'll see that each of them seems to
+have remarkably structured that's quite similar to what we saw before in terms of
+these types of receptive feels in V1. In other words, they are receptive fields
+that are oriented, so there's an orientation here and they have both the
+white and dark regions. So in other words, the plus and the minus
+that we saw in the V1 receptive fields, you see them here also.
+And you can see that they're localized to different locations, so they're very
+specific to location, which is another characteristic of receptive fields.
+And they're oriented and they have different orientations that span the set
+of orientations that you might get in natural images.
+And so what is the conclusion that we can draw?
+The conclusion is that the brain maybe trying to find faithful and efficient
+representations of an animals, natural environment.
+So people have applied this principle also to other kinds of inputs, such as
+sounds for example. And they find that the auditory cortex
+representation is also quite explainable by this type of principle, the principle
+of efficient coding. Okay, great.
+So we'll explore a variety of these types of Descriptive, Mechanistic, and
+Interpretive models throughout the course.
+But before we do that, we have to do one thing and you might guess what that is?
+No, it's not homeworks. It's being introduced to neurobiology.
+So a lot of you might not have a background in neurobiology.
+So for those of you have, who have never taken a neurobiology course before, the
+next set of lectures will introduce you to neurons, synapses, and also brain
+regions. So until then, adios, amigos, and amigas.
